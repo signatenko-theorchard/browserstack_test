@@ -35,9 +35,9 @@ import os
 #     "name" : "first_test"
 # }
 
-user_name = "semyonignatenko_stFnfH"
+# user_name = "semyonignatenko_stFnfH"
 # access_key = "HDqFb91FxyR48zGcE9Gb"
-# user_name = os.getenv("BROWSERSTACK_USERNAME")
+user_name = os.getenv("BROWSERSTACK_USERNAME")
 access_key = os.getenv("BROWSERSTACK_ACCESS_KEY")
 browserstack_local = os.getenv("BROWSERSTACK_LOCAL")
 build_name = os.getenv("BROWSERSTACK_BUILD_NAME")
@@ -46,8 +46,8 @@ app = os.getenv("BROWSERSTACK_APP_ID")
 
 desired_cap = {
     # Set your access credentials
-    # "browserstack.user" : user_name,
-    # "browserstack.key" : access_key,
+    "browserstack.user" : user_name,
+    "browserstack.key" : access_key,
     # "browserstack.local" : "true",
 
     # Set URL of the application under test
@@ -66,18 +66,18 @@ desired_cap = {
     
 }
 
-remote_addr = "https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub"
+# remote_addr = "https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub"
 
-print(remote_addr)
+# print(remote_addr)
 
-driver = webdriver.Remote(remote_addr, desired_cap)
+# driver = webdriver.Remote(remote_addr, desired_cap)
 
 # Initialize the remote Webdriver using BrowserStack remote URL
 # and desired capabilities defined above
-# driver = webdriver.Remote(
-#     command_executor="http://hub-cloud.browserstack.com/wd/hub", 
-#     desired_capabilities=desired_cap
-# )
+driver = webdriver.Remote(
+    command_executor="http://hub-cloud.browserstack.com/wd/hub", 
+    desired_capabilities=desired_cap
+)
 
 login_button = WebDriverWait(driver, 60).until(
     EC.element_to_be_clickable((MobileBy.ID, "loginButton"))
