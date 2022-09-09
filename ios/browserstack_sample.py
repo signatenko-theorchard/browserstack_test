@@ -58,7 +58,7 @@ desired_cap = {
     "os_version" : "15",
 
     "autoDissmissAlerts" : "true",
-
+    
     # Set other BrowserStack capabilities
     "project" : "First Python project", 
     "build" : "browserstack-build-2",
@@ -66,9 +66,11 @@ desired_cap = {
     
 }
 
-print("https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub")
+remote_addr = "https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub"
 
-driver = webdriver.Remote("https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub", desired_cap)
+print(remote_addr)
+
+driver = webdriver.Remote(remote_addr, desired_cap)
 
 
 # Initialize the remote Webdriver using BrowserStack remote URL
