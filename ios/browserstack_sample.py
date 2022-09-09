@@ -48,7 +48,7 @@ desired_cap = {
     # Set your access credentials
     # "browserstack.user" : user_name,
     # "browserstack.key" : access_key,
-    # "browserstack.local" : "true",
+    "browserstack.local" : browserstack_local,
 
     # Set URL of the application under test
     "app" : app,
