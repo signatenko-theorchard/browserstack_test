@@ -8,7 +8,6 @@ desired_cap = {
     # Set your access credentials
     "browserstack.user" : "semyonignatenko_stFnfH",
     "browserstack.key" : "HDqFb91FxyR48zGcE9Gb",
-    "browserstack.local" : "true",
 
     # Set URL of the application under test
     "app" : "bs://ee884312c12db9d98879dc154080a24d451c595b",
