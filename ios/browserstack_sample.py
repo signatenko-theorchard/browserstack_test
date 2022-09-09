@@ -46,8 +46,8 @@ app = os.getenv("BROWSERSTACK_APP_ID")
 
 desired_cap = {
     # Set your access credentials
-    "browserstack.user" : user_name,
-    "browserstack.key" : access_key,
+    # "browserstack.user" : user_name,
+    # "browserstack.key" : access_key,
     # "browserstack.local" : "true",
 
     # Set URL of the application under test
