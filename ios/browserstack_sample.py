@@ -60,10 +60,12 @@ desired_cap = {
 
     # Set other BrowserStack capabilities
     "project" : "First Python project", 
-    "build" : "browserstack-build-1",
+    "build" : "browserstack-build-2",
     "name" : build_name,
     
 }
+
+print("https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub")
 
 driver = webdriver.Remote("https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub", desired_cap)
 
