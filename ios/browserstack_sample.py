@@ -70,7 +70,10 @@ remote_addr = "https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/w
 
 print(remote_addr)
 
-driver = webdriver.Remote(remote_addr, desired_cap)
+try:
+    driver = webdriver.Remote(remote_addr, desired_cap)
+except:
+    print("Error occurred.")
 
 
 # Initialize the remote Webdriver using BrowserStack remote URL
