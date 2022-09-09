@@ -35,10 +35,10 @@ import os
 #     "name" : "first_test"
 # }
 
-user_name = "semyonignatenko_stFnfH"
-access_key = "HDqFb91FxyR48zGcE9Gb"
-# user_name = os.getenv("BROWSERSTACK_USERNAME")
-# access_key = os.getenv("BROWSERSTACK_ACCESS_KEY")
+# user_name = "semyonignatenko_stFnfH"
+# access_key = "HDqFb91FxyR48zGcE9Gb"
+user_name = os.getenv("BROWSERSTACK_USERNAME")
+access_key = os.getenv("BROWSERSTACK_ACCESS_KEY")
 browserstack_local = os.getenv("BROWSERSTACK_LOCAL")
 build_name = os.getenv("BROWSERSTACK_BUILD_NAME")
 browserstack_local_identifier = os.getenv("BROWSERSTACK_LOCAL_IDENTIFIER")
