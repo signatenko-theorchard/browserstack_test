@@ -35,9 +35,9 @@ import os
 #     "name" : "first_test"
 # }
 
-# user_name = "semyonignatenko_stFnfH"
+user_name = "semyonignatenko_stFnfH"
 # access_key = "HDqFb91FxyR48zGcE9Gb"
-user_name = os.getenv("BROWSERSTACK_USERNAME")
+# user_name = os.getenv("BROWSERSTACK_USERNAME")
 access_key = os.getenv("BROWSERSTACK_ACCESS_KEY")
 browserstack_local = os.getenv("BROWSERSTACK_LOCAL")
 build_name = os.getenv("BROWSERSTACK_BUILD_NAME")
@@ -70,11 +70,7 @@ remote_addr = "https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/w
 
 print(remote_addr)
 
-try:
-    driver = webdriver.Remote(remote_addr, desired_cap)
-except:
-    print("Error occurred.")
-
+driver = webdriver.Remote(remote_addr, desired_cap)
 
 # Initialize the remote Webdriver using BrowserStack remote URL
 # and desired capabilities defined above
