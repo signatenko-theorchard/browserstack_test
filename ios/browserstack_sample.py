@@ -57,7 +57,7 @@ desired_cap = {
 
     # Specify device and os_version for testing
     "platformName": "iOS",
-    "device" : "iPhone 13",
+    "deviceName" : "iPhone 13",
     "os_version" : "15",
 
     "autoDissmissAlerts" : "true",
