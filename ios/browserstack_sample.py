@@ -1,3 +1,4 @@
+from platform import platform
 from appium import webdriver
 from appium.webdriver.common.mobileby import MobileBy
 from selenium.webdriver.support.ui import WebDriverWait
@@ -55,6 +56,7 @@ desired_cap = {
     "app" : app,
 
     # Specify device and os_version for testing
+    "platformName": "iOS",
     "device" : "iPhone 13",
     "os_version" : "15",
 
