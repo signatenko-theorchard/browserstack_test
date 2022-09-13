@@ -69,9 +69,10 @@ desired_cap = {
     
 }
 
+print(app)
 remote_addr = "https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/wd/hub"
 
-print(remote_addr)
+
 
 driver = webdriver.Remote(remote_addr, desired_cap)
 
