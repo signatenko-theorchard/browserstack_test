@@ -29,6 +29,7 @@ desired_cap = {
     "os_version" : "15",
 
     "autoDissmissAlerts" : "true",
+    "autoAcceptAlerts": "true",
     
     # Set other BrowserStack capabilities
     "project" : "First Python project", 
