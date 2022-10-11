@@ -28,7 +28,7 @@ desired_cap = {
     
     # Set other BrowserStack capabilities
     "project" : "Android Test Project", 
-    "build" : "browserstack-build-1",
+    "build" : "browserstack-build-android",
     "name" : build_name,
     
 }

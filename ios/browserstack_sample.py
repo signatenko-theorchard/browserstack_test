@@ -33,7 +33,7 @@ desired_cap = {
     
     # Set other BrowserStack capabilities
     "project" : "First Python project", 
-    "build" : "browserstack-build-2",
+    "build" : "browserstack-build-ios",
     "name" : build_name,
     
 }
