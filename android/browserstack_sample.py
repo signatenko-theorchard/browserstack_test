@@ -61,10 +61,18 @@ log_in_btn.click()
 next_btn = WebDriverWait(driver, 60).until(
     EC.element_to_be_clickable((MobileBy.XPATH, "//*[@resource-id=\"nextButton\"]")))
 
-next_btn.click()
-next_btn.click()
-next_btn.click()
-next_btn.click()
+for x in range(0, 3):
+   next_btn.click()
+
+lets_go_button = WebDriverWait(driver, 60).until(
+    EC.element_to_be_clickable((MobileBy.XPATH, '//*[@text="LET\'S GO!"]')))
+
+lets_go_button.click()
+
+done_button = WebDriverWait(driver, 60).until(
+    EC.element_to_be_clickable((MobileBy.XPATH, '"//*[@resource-id=\"doneButton\"]')))
+
+done_button.click()
 
 top_track_item = WebDriverWait(driver, 60).until(
     EC.element_to_be_clickable((MobileBy.XPATH, '//*[contains(@resource-id, "topTracksItem")]')))
