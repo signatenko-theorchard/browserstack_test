@@ -71,4 +71,5 @@ login_btn = WebDriverWait(driver, 10).until(
 )
 
 login_btn.click()
+
 driver.quit()
