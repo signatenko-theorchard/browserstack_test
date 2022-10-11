@@ -1,6 +1,7 @@
 from appium import webdriver
 from appium.webdriver.common.mobileby import MobileBy
 from selenium.webdriver.support.ui import WebDriverWait
+from appium.webdriver.common.touch_action import TouchAction
 from selenium.webdriver.support import expected_conditions as EC
 import time
 import os
@@ -74,14 +75,16 @@ done_button = WebDriverWait(driver, 60).until(
 
 done_button.click()
 
-top_track_item = WebDriverWait(driver, 60).until(
+top_tracks_item = WebDriverWait(driver, 60).until(
     EC.element_to_be_clickable((MobileBy.XPATH, '//*[contains(@resource-id, "topTracksItem")]')))
 
-catalog_tab = WebDriverWait(driver, 60).until(
-    EC.element_to_be_clickable((MobileBy.XPATH, '//*[@content-desc=\"MyCatalogStack, tab, 1 of 3\"]')))
+#log out
+TouchAction(driver).tap(x=963, y=174).perform()
 
-top_track_item.click()
-catalog_tab.click()
+log_out_btn = WebDriverWait(driver, 60).until(
+    EC.element_to_be_clickable((MobileBy.XPATH, "//*[@resource-id=\"logOutButton\"]")))
+
+log_out_btn.click()
   
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
 driver.quit()
