@@ -23,7 +23,7 @@ desired_cap = {
     # Specify device and os_version for testing
     "platformName" : "Android",
     "deviceName" : "Google Pixel 5",
-    "platformVersion" : "12",
+    "platformVersion" : "12.0",
     
     # Set other BrowserStack capabilities
     "project" : "Android Test Project", 
