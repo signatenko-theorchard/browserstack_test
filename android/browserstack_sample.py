@@ -10,7 +10,6 @@ access_key = os.getenv("BROWSERSTACK_ACCESS_KEY")
 browserstack_local = os.getenv("BROWSERSTACK_LOCAL")
 build_name = os.getenv("BROWSERSTACK_BUILD_NAME")
 browserstack_local_identifier = os.getenv("BROWSERSTACK_LOCAL_IDENTIFIER")
-#app = os.getenv("BROWSERSTACK_APP_ID")
 app = "SampleAppAndroid"
 
 desired_cap = {
@@ -40,14 +39,19 @@ driver = webdriver.Remote(remote_addr, desired_cap)
 
   
 # If you have uploaded your app, write your test case here.
-#'//*[@resource-id="loginButton"]'
 login_button = WebDriverWait(driver, 60).until(
     EC.element_to_be_clickable((MobileBy.XPATH, "//*[@resource-id='loginButton']"))
 )
 login_button.click()
-# WebDriverWait(driver, 30).until(
-#     EC.element_to_be_clickable((MobileBy.CLASS_NAME, "android.widget.TextView"))
-# ) 
+
+username_input = WebDriverWait(driver, 60).until(
+    EC.element_to_be_clickable((MobileBy.XPATH, "//*[@resource-id='username']"))
+
+username_input = WebDriverWait(driver, 60).until(
+    EC.element_to_be_clickable((MobileBy.XPATH, "//*[@resource-id='password']"))
+
+user_name.send_keys("cucumber@theorchard.io")
+password.send_keys("??33&suddenly&MILLION&least&51??")
   
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
 driver.quit()
