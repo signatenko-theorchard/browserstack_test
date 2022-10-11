@@ -45,13 +45,13 @@ login_button = WebDriverWait(driver, 60).until(
 login_button.click()
 
 username_input = WebDriverWait(driver, 60).until(
-    EC.element_to_be_clickable((MobileBy.XPATH, "//*[@resource-id='username']"))
+    EC.element_to_be_clickable((MobileBy.XPATH, "//*[@resource-id='username']")))
 
-username_input = WebDriverWait(driver, 60).until(
-    EC.element_to_be_clickable((MobileBy.XPATH, "//*[@resource-id='password']"))
+password_input = WebDriverWait(driver, 60).until(
+    EC.element_to_be_clickable((MobileBy.XPATH, "//*[@resource-id='password']")))
 
-user_name.send_keys("cucumber@theorchard.io")
-password.send_keys("??33&suddenly&MILLION&least&51??")
+username_input.send_keys("cucumber@theorchard.io")
+password_input.send_keys("??33&suddenly&MILLION&least&51??")
   
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
 driver.quit()
