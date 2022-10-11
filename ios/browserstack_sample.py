@@ -50,7 +50,7 @@ desired_cap = {
     # Set your access credentials
     # "browserstack.user" : user_name,
     # "browserstack.key" : access_key,
-    "browserstack.local" : browserstack_local,
+    "browserstack.local" : true,
     "browserstack.localIdentifier" : browserstack_local_identifier,
 
     # Set URL of the application under test
