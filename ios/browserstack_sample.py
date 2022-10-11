@@ -44,13 +44,13 @@ remote_addr = "https://"+user_name+":"+access_key+"@hub-cloud.browserstack.com/w
 driver = webdriver.Remote(remote_addr, desired_cap)
 
 login_button = WebDriverWait(driver, 60).until(
-    EC.element_to_be_clickable((MobileBy.ID, "loginButton"))
-)
+    EC.element_to_be_clickable((MobileBy.ID, "loginButton")))
+
 login_button.click()
-continue_button = WebDriverWait(driver, 60).until(
-    EC.element_to_be_clickable((MobileBy.ID, "Continue"))
-)
-continue_button.click()
+
+# continue_button = WebDriverWait(driver, 60).until(
+#     EC.element_to_be_clickable((MobileBy.ID, "Continue")))
+# continue_button.click()
 
 username_input_xpath = '//*/XCUIElementTypeTextField'
 password_input_xpath = '//*/XCUIElementTypeSecureTextField'
@@ -58,19 +58,18 @@ password_input_xpath = '//*/XCUIElementTypeSecureTextField'
 login_btn_id = 'LOG IN'
 
 username = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((MobileBy.XPATH, username_input_xpath))
-)
+    EC.element_to_be_clickable((MobileBy.XPATH, username_input_xpath)))
 
 password = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((MobileBy.XPATH, password_input_xpath))
-)
+    EC.element_to_be_clickable((MobileBy.XPATH, password_input_xpath)))
+
 username.click()
+
 username.send_keys("cucumber@theorchard.io")
 password.send_keys("??33&suddenly&MILLION&least&51??")
 
 login_btn = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, login_btn_id))
-)
+    EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, login_btn_id)))
 
 login_btn.click()
 
