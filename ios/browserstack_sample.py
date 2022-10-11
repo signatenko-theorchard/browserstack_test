@@ -85,10 +85,10 @@ enable_button = WebDriverWait(driver, 10).until(
 
 enable_button.click()
 
-done_button = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, 'doneButton')))
+catalog_tab = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, 'MyCatalogStack, tab, 1 of 3')))
 
-done_button.click()
+catalog_tab.click()
 
 #log out
 TouchAction(self.driver).tap(x=347, y=61).perform()
