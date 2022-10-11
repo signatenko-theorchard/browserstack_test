@@ -22,6 +22,7 @@ desired_cap = {
     "app" : app,
 
     # Specify device and os_version for testing
+    "platformName" : "android",
     "device" : "Google Pixel 3",
     "os_version" : "9.0",
     
