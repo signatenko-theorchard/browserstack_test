@@ -92,6 +92,8 @@ catalog_tab.click()
 top_track = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((MobileBy.XPATH, '//*[contains(@name, \"topTracksItem\")])[5]"')))
 
+top_track.click()
+
 #log out
 TouchAction(driver).tap(x=347, y=61).perform()
 
