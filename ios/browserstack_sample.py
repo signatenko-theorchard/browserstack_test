@@ -2,6 +2,7 @@ from platform import platform
 from appium import webdriver
 from appium.webdriver.common.mobileby import MobileBy
 from selenium.webdriver.support.ui import WebDriverWait
+from appium.webdriver.common.touch_action import TouchAction
 from selenium.webdriver.support import expected_conditions as EC
 import time
 import os
@@ -71,5 +72,27 @@ login_btn = WebDriverWait(driver, 10).until(
 )
 
 login_btn.click()
+
+next_button = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, 'nextButton')))
+
+for x in range(0, 3):
+   next_button.click()
+
+enable_button = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, 'enableButton')))
+
+enable_button.click()
+
+done_button = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, 'doneButton')))
+
+done_button.click()
+
+#log out
+TouchAction(self.driver).tap(x=347, y=61).perform()
+
+logout_button = WebDriverWait(driver, 10).until(
+    EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, 'logOutButton')))
 
 driver.quit()
