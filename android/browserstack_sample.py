@@ -70,11 +70,6 @@ lets_go_button = WebDriverWait(driver, 60).until(
 
 lets_go_button.click()
 
-done_button = WebDriverWait(driver, 60).until(
-    EC.element_to_be_clickable((MobileBy.XPATH, '"//*[@resource-id=\"doneButton\"]')))
-
-done_button.click()
-
 top_tracks_item = WebDriverWait(driver, 60).until(
     EC.element_to_be_clickable((MobileBy.XPATH, '//*[contains(@resource-id, "topTracksItem")]')))
 
