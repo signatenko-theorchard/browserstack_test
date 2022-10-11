@@ -75,7 +75,7 @@ catalog_tab =  WebDriverWait(driver, 60).until(
 
 catalog_tab.click()
 
-top_tracks_item = WebDriverWait(driver, 60).until(
+assert WebDriverWait(driver, 60).until(
     EC.element_to_be_clickable((MobileBy.XPATH, '//*[contains(@resource-id, "topTracksItem")]')))
 
 #log out
@@ -85,6 +85,8 @@ log_out_btn = WebDriverWait(driver, 60).until(
     EC.element_to_be_clickable((MobileBy.XPATH, "//*[@resource-id=\"logOutButton\"]")))
 
 log_out_btn.click()
+
+assert login_button
   
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
 driver.quit()
