@@ -95,4 +95,6 @@ TouchAction(driver).tap(x=347, y=61).perform()
 logout_button = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, 'logOutButton')))
 
+logout_button.click()
+
 driver.quit()
