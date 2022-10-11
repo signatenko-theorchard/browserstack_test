@@ -52,6 +52,9 @@ password_input = WebDriverWait(driver, 60).until(
 
 username_input.send_keys("cucumber@theorchard.io")
 password_input.send_keys("??33&suddenly&MILLION&least&51??")
+
+log_in_btn = WebDriverWait(driver, 60).until(
+    EC.element_to_be_clickable((MobileBy.XPATH, "//android.widget.Button[@text=\"LOG IN\"]")))
   
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
 driver.quit()
