@@ -56,7 +56,16 @@ password_input.send_keys("??33&suddenly&MILLION&least&51??")
 log_in_btn = WebDriverWait(driver, 60).until(
     EC.element_to_be_clickable((MobileBy.XPATH, "//android.widget.Button[@text=\"LOG IN\"]")))
 
-log_in_btn.click()    
+log_in_btn.click()
+
+top_track_item = WebDriverWait(driver, 60).until(
+    EC.element_to_be_clickable((MobileBy.XPATH, '//*[contains(@resource-id, "topTracksItem")]')))
+
+catalog_tab = WebDriverWait(driver, 60).until(
+    EC.element_to_be_clickable((MobileBy.XPATH, '//*[@content-desc=\"MyCatalogStack, tab, 1 of 3\"]')))
+
+top_track_item.click()
+catalog_tab.click()
   
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
 driver.quit()
