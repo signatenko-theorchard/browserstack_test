@@ -91,7 +91,7 @@ catalog_tab = WebDriverWait(driver, 10).until(
 catalog_tab.click()
 
 #log out
-TouchAction(self.driver).tap(x=347, y=61).perform()
+TouchAction(driver).tap(x=347, y=61).perform()
 
 logout_button = WebDriverWait(driver, 10).until(
     EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, 'logOutButton')))
