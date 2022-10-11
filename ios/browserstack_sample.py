@@ -43,7 +43,8 @@ access_key = os.getenv("BROWSERSTACK_ACCESS_KEY")
 browserstack_local = os.getenv("BROWSERSTACK_LOCAL")
 build_name = os.getenv("BROWSERSTACK_BUILD_NAME")
 browserstack_local_identifier = os.getenv("BROWSERSTACK_LOCAL_IDENTIFIER")
-app = os.getenv("BROWSERSTACK_APP_ID")
+#app = os.getenv("BROWSERSTACK_APP_ID")
+app = "SampleApp"
 
 desired_cap = {
     # Set your access credentials
