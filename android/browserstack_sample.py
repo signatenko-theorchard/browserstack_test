@@ -62,6 +62,9 @@ next_btn = WebDriverWait(driver, 60).until(
     EC.element_to_be_clickable((MobileBy.XPATH, "//*[@resource-id=\"nextButton\"]")))
 
 next_btn.click()
+next_btn.click()
+next_btn.click()
+next_btn.click()
 
 top_track_item = WebDriverWait(driver, 60).until(
     EC.element_to_be_clickable((MobileBy.XPATH, '//*[contains(@resource-id, "topTracksItem")]')))
