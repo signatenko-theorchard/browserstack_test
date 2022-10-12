@@ -88,8 +88,21 @@ log_out_btn.click()
 
 # search_results = driver.find_elements(MobileBy.XPATH("//*[@resource-id='loginButton']"))
 # find_elements_by_class_name
-search_results = driver.find_elements_by_xpath("//*[@resource-id='loginButton']")
-if (len(search_results) > 0):
+# self.driver.find_element_by_accessibility_id('SomeAccessibilityID').is_displayed()
+
+WebDriverWait(driver, 60).until(
+    EC.element_to_be_clickable((MobileBy.XPATH, "//*[@resource-id='loginButton']"))
+)
+
+
+# search_results = driver.find_elements_by_xpath("//*[@resource-id='loginButton']")
+# if (len(search_results) > 0):
+
+search_result = WebDriverWait(driver, 60).until(
+    EC.element_to_be_clickable((MobileBy.XPATH, "//*[@resource-id='loginButton']"))
+)
+
+if search_result.is_displayed():
 	driver.execute_script('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed", "reason": "Results found!"}}')
 else:
 	driver.execute_script('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"failed", "reason": "No results found"}}')
