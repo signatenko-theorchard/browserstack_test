@@ -89,11 +89,6 @@ catalog_tab = WebDriverWait(driver, 10).until(
 
 catalog_tab.click()
 
-# top_track = WebDriverWait(driver, 10).until(
-#     EC.element_to_be_clickable((MobileBy.XPATH, '//*[contains(@name, \"topTracksItem\")])[5]"')))
-
-# top_track.click()
-
 #log out
 TouchAction(driver).tap(x=347, y=61).perform()
 
@@ -111,5 +106,5 @@ if search_result.is_displayed():
 else:
 	driver.execute_script('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"failed", "reason": "No results found"}}')
 
-
+# Invoke driver.quit() after the test is done to indicate that the test is completed.
 driver.quit()
