@@ -89,16 +89,16 @@ catalog_tab = WebDriverWait(driver, 10).until(
 
 catalog_tab.click()
 
-top_track = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((MobileBy.XPATH, '//*[contains(@name, \"topTracksItem\")])[5]"')))
+# top_track = WebDriverWait(driver, 10).until(
+#     EC.element_to_be_clickable((MobileBy.XPATH, '//*[contains(@name, \"topTracksItem\")])[5]"')))
 
-top_track.click()
+# top_track.click()
 
 #log out
 TouchAction(driver).tap(x=347, y=61).perform()
 
-logout_button = WebDriverWait(driver, 10).until(
-    EC.element_to_be_clickable((MobileBy.ACCESSIBILITY_ID, 'logOutButton')))
+logout_button = WebDriverWait(driver, 20).until(
+    EC.element_to_be_clickable((MobileBy.ID, 'logOutButton')))
 
 logout_button.click()
 
