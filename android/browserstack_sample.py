@@ -85,6 +85,12 @@ log_out_btn = WebDriverWait(driver, 60).until(
     EC.element_to_be_clickable((MobileBy.XPATH, "//*[@resource-id=\"logOutButton\"]")))
 
 log_out_btn.click()
+
+search_results = driver.find_elements(MobileBy.XPATH("//*[@resource-id='loginButton']"))
+if (len(search_results) > 0):
+	driver.execute_script('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed", "reason": "Results found!"}}')
+else:
+	driver.execute_script('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"failed", "reason": "No results found"}}')
   
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
 driver.quit()
