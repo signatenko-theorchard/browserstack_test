@@ -99,7 +99,7 @@ logout_button.click()
 
 #assert that login screen is displayed
 search_result = WebDriverWait(driver, 60).until(
-    EC.element_to_be_clickable((MobileBy.ID, "loginButton_1")))
+    EC.element_to_be_clickable((MobileBy.ID, "loginButton")))
 
 if search_result.is_displayed():
 	driver.execute_script('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed", "reason": "Results found!"}}')
