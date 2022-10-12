@@ -86,7 +86,9 @@ log_out_btn = WebDriverWait(driver, 60).until(
 
 log_out_btn.click()
 
-search_results = driver.find_elements(MobileBy.XPATH("//*[@resource-id='loginButton']"))
+# search_results = driver.find_elements(MobileBy.XPATH("//*[@resource-id='loginButton']"))
+# find_elements_by_class_name
+search_results = driver.find_elements_by_xpath("//*[@resource-id='loginButton']")
 if (len(search_results) > 0):
 	driver.execute_script('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed", "reason": "Results found!"}}')
 else:
